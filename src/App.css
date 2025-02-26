@@ -1,0 +1,44 @@
+*{
+  margin: none;
+  padding: none;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to bottom, #e3e8f1, #b8c3d9); /* Main background gradient */
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden; /* Prevents overflow from pseudo-elements */
+}
+
+/* Left semi-circle */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 800px;  /* Adjust size as needed */
+  height: 800px;
+  background: radial-gradient(circle, rgba(158, 192, 235, 0.8) 30%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Left semi-circle positioning */
+body::before {
+  left: -400px; /* Move it partly outside the viewport */
+  top: 20%;
+}
+
+/* Right semi-circle positioning */
+body::after {
+  right: -200px; /* Move it partly outside the viewport */
+  top: 20%;
+}
+
+
+/* Right semi-circle */
+body::after {
+  right: -300px; /* Moves it outside the viewport slightly */
+  top: 20%;
+}
+
+
