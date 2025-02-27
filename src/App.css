@@ -4,41 +4,41 @@
   box-sizing: border-box;
 }
 body {
-  background: linear-gradient(to bottom, #e3e8f1, #b8c3d9); /* Main background gradient */
+margin: 0;
+padding: 0;
+font-family: 'Roboto', sans-serif;
+background: #ffff;
+}
+
+#home {
+  background: linear-gradient(to bottom, #fcfcfc, #d7e1f7); /* Main background gradient */
   min-height: 100vh;
   position: relative;
   overflow: hidden; /* Prevents overflow from pseudo-elements */
+  margin-top: 0;
 }
 
-/* Left semi-circle */
-body::before,
-body::after {
+/* Left & Right semi-circles */
+#home::before,
+#home::after {
   content: "";
   position: absolute;
   width: 800px;  /* Adjust size as needed */
   height: 800px;
-  background: radial-gradient(circle, rgba(158, 192, 235, 0.8) 30%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(182, 195, 213, 0.8) 40%, rgba(255, 255, 255, 0) 60%);
   border-radius: 50%;
-  z-index: -1;
+  z-index: 0; /* Adjust to ensure visibility */
 }
 
 /* Left semi-circle positioning */
-body::before {
-  left: -400px; /* Move it partly outside the viewport */
+#home::before {
+  left: -500px; /* Move it partly outside the viewport */
   top: 20%;
 }
 
 /* Right semi-circle positioning */
-body::after {
-  right: -200px; /* Move it partly outside the viewport */
+#home::after {
+  right: -500px; /* Move it partly outside the viewport */
   top: 20%;
 }
-
-
-/* Right semi-circle */
-body::after {
-  right: -300px; /* Moves it outside the viewport slightly */
-  top: 20%;
-}
-
 

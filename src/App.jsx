@@ -6,12 +6,11 @@ import Nav from './components/Nav'
 const App = () => {
   return (
       <div>
-          <LoginWarning />,
-          <Nav />,
-          <div className="max-w-7xl mx-auto p-6">
+          <LoginWarning />
+         
           <Home />
 
-          </div>
+        
       </div>
   );
 };
